@@ -52,6 +52,11 @@ function gradeQuiz(candidateAnswers) {
   
   let grade = (score / questions.length) * 100;
   console.log(`Your final grade is ${grade}% (${score} out of ${questions.length} correct)`);
+  if (grade >= 8) {
+    console.log("Congratulations, you passed the quiz!");
+  } else if (grade <= 8) {
+    console.log("Sorry, you did not pass the quiz.");
+  }
 
   return grade;
 }
